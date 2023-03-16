@@ -7,6 +7,7 @@ import {
   Switch,
 } from "react-router-dom";
 import MainNavigation from "./shared/Navigation/MainNavigation";
+import ListeProfesseurs from "./professeurs/components/ListeProfesseurs";
 
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
       <MainNavigation />
       <main>
         <Switch>
+          <Route path="/" exact>
+            <ListeProfesseurs />
+          </Route>
           <Redirect to="/" />
         </Switch>
       </main>
